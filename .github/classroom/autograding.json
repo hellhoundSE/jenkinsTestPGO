@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "Test Point",
+      "setup": "",
+      "run": "gradle test --tests TestPoint",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test Random Numbers",
+      "setup": "",
+      "run": "gradle test --tests TestRandomNumbers",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test CreditCard Form",
+      "setup": "",
+      "run": "gradle test --tests TestCreditCardForm",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    }
+  ]
+}
