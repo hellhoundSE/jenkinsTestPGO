@@ -13,7 +13,7 @@ public class TestCreditCardForm {
     public void testNumberField(){
         GenericTestFactory.testFieldExists(CreditCardForm.class,"number");
         GenericTestFactory.testFieldType(CreditCardForm.class,"number",String.class);
-        GenericTestFactory.testFieldModifier(CreditCardForm.class,"number", Modifier.PRIVATE);
+        GenericTestFactory.testFieldModifier(CreditCardForm.class,"number", Modifier.STATIC);
     }
     @Test
     public void testCVCField(){
