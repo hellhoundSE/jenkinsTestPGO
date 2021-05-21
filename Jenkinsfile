@@ -1,24 +1,20 @@
 pipeline {
-    agent any
-
-    triggers {
-        pollSCM('*/5 * * * *')
+    agent {
+        docker {
+            image 'maven:3.8.1-adoptopenjdk-11' 
+            args '-v /root/.m2:/root/.m2' 
+        }
     }
-
     stages {
         stage('Compile') {
             steps {
-                gradlew('clean', 'classes')
+                sh 'gradle test --tests'
             }
         }
         stage('Unit Tests') {
             steps {
-                gradlew('test')
+                sh 'gradle build'
             }
         }
     }
-}
-
-def gradlew(String... args) {
-    sh "./gradlew ${args.join(' ')} -s"
 }
